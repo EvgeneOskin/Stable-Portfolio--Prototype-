@@ -32,5 +32,5 @@ def goodness(quotes):
         s = sum (quotes.get_day_prices(day))
         goodness = goodness + (s - buy_price)**2
 
-    goodness = goodness / quotes.length
+    goodness = goodness / quotes.length / buy_price / buy_price
     return goodness
